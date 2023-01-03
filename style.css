@@ -39,6 +39,7 @@ img {
   height: 100%;
   opacity: 0;
   transition: 0.5s ease-in;
+  will-change: opacity;
 }
 .visible {
   opacity: 1;
@@ -48,9 +49,13 @@ img {
   top: 0;
   height: 100vh;
   /* sticky 적용된 것 높이가 따로 없어서 */
+  overflow-x: hidden;
 }
 .scroll-text {
   position: relative;
+}
+.strikethrough {
+  text-decoration: line-through;
 }
 .step {
   margin-bottom: 60vh;
@@ -65,8 +70,29 @@ img {
 .bird {
   position: absolute;
   left: 0;
-  width: 100px;
+  width: 10%;
   bottom: 70%;
   transform: translateX(-100%);
   transition: 1.5s 0.5s linear;
+}
+[data-index="5"] .bird {
+  left: 30%;
+  bottom: 30%;
+}
+.global-footer {
+  padding: 2rem;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .bird {
+    position: absolute;
+    left: 0;
+    bottom: 70%;
+    transform: translateX(-100%);
+    transition: 1.5s 0.5s linear;
+  }
+  [data-index="5"] .bird {
+    left: 30%;
+    top: 55%;
+  }
 }

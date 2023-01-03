@@ -11,6 +11,20 @@
         ).style.transform = `translateX(-100%)`;
       }
     },
+
+    birdFlies2(key) {
+      if (key) {
+        document.querySelector(
+          "[data-index ='5'] .bird"
+        ).style.transform = `translate(${window.innerWidth}px, ${
+          -window.innerHeight * 0.5
+        }px)`;
+      } else {
+        document.querySelector(
+          "[data-index ='5'] .bird"
+        ).style.transform = `translate(-30%)`;
+      }
+    },
   };
 
   const stepElems = document.querySelectorAll(".step");
@@ -64,6 +78,11 @@
         activate(currentItem.dataset.action);
       }
     }
+  });
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      scrollTo(0, 0);
+    }, 100);
   });
   activate();
 })();
