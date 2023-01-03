@@ -19,7 +19,7 @@ a {
 img {
   /* 컨테이너가 이미지보다 줄어들었을 때 같이 줄어들수있도록 */
   max-width: 100%;
-  height: auto;
+  /* height: auto; */
 }
 
 /* header*/
@@ -61,4 +61,12 @@ img {
 }
 .scene-img {
   max-height: 100vh;
+}
+.bird {
+  position: absolute;
+  left: 0;
+  width: 100px;
+  bottom: 70%;
+  transform: translateX(-100%);
+  transition: 1.5s 0.5s linear;
 }
